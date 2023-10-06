@@ -1,6 +1,16 @@
 const taskContainer = document.querySelector('.taskContainer')
 const inputTask = document.querySelector('.inputTask')
 const listItUp = document.querySelector('.inputButton')
+const emptyMessage = document.querySelector('.emptyMessage')
+
+// Save Data
+function saveData() {
+    localStorage.data = taskContainer.innerHTML
+}
+
+if (localStorage.data.length !== 0) {
+    taskContainer.innerHTML = localStorage.data
+}
 
 //Date And Year
 const d = new Date()
@@ -9,25 +19,26 @@ document.querySelector('.year').innerHTML = `~${d.getFullYear()}~`
 document.querySelector('.date').innerHTML = `${(d.getDate()<10) ? '0'+d.getDate() : d.getDate()}-${months[d.getMonth()]}`
 
 //Add Task Button (list it up!)
-listItUp.addEventListener('click', () => {
+function addTasks() {
     if (inputTask.value.length === 0) {
-        alert('Please enter the task')
-    } else {
+        inputTask.placeholder = 'Please enter the task'
+        inputTask.classList.add('emptyMessage')
+    } else{
         taskContainer.innerHTML += `<li>>> ${inputTask.value} <span>x</span></li>`
         inputTask.value = ''
+        inputTask.placeholder = '..'
+        inputTask.classList.remove('emptyMessage')
     }
     saveData()
+}
+
+listItUp.addEventListener('click', () => {
+    addTasks()
 })
 
 inputTask.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
-        if (inputTask.value.length === 0) {
-            alert('Please enter the task')
-        } else{
-            taskContainer.innerHTML += `<li>>> ${inputTask.value} <span>x</span></li>`
-            inputTask.value = ''
-        }
-        saveData()
+        addTasks()
     }
 })
 
@@ -50,11 +61,3 @@ taskContainer.addEventListener('click', (e) => {
     }
     saveData()
 })
-
-function saveData() {
-    localStorage.data = taskContainer.innerHTML
-}
-
-if (localStorage.data.length !== 0) {
-    taskContainer.innerHTML = localStorage.data
-}
