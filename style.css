@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Gochi Hand", cursive, 'Roboto', sans-serif;
+    color: #131313;
+}
+
+body {
+    background: #BBADFF;
+    overflow: hidden;
+}
+
+
+
+.calendar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.year {
+    font-size: 60px;
+    -webkit-text-stroke: 2px #E9E9ED;
+    color: #DAB6FC;
+    opacity: .8;
+    text-shadow: 1px 1px 15px #3d3d3d;
+}
+.date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #000;
+    white-space: nowrap;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background: #8895b390;
+    background-image: radial-gradient(#DAB6FC90 7.2%, transparent 0);
+    background-size: 35px 35px;
+
+    border: 4px double #E9E9ED;
+    padding: 20px;
+    width: 80vw;
+    max-width: 720px;
+    min-height: 500px;
+    max-height: 80dvh;
+    border-radius: 20px;
+    box-shadow: 1px 1px 40px #3d3d3d;
+    overflow-y: auto;
+
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.container::-webkit-scrollbar {
+    width: .3em;
+  }
+   
+.container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #8E94F2;
+    outline: 1px solid slategrey;
+}
+
+
+.headingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingImg {
+    width: 120px;
+    height: 100%;
+}
+
+.headingContainer h1 {
+    font-size: 30px;
+    margin-left: 10px;
+    background-color: #8E94F2;
+    rotate: 2deg;
+    padding: 5px 4px 2px 15px;
+    border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+
+}
+
+.inputHeading {
+    text-align: center;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.inputTask {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed #DAB6FC;
+    padding: 2px 10px;
+    margin-right: 20px;
+    font-size: 30px;
+    width: 80%;
+    min-width: 150px;
+}
+
+.inputTask:focus {
+    outline: 4px double #BBADFF;
+    border-radius: 8px;
+    border: none;
+}
+
+.inputButton {
+    position: relative;
+    background-color: #E9E9ED;
+    font-size: 20px;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+}
+.inputButton::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 1px;
+    top: 0;
+    right: -1px;
+    background-color: #acacac;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+
+.inputButton:active {
+    transform: translate(1px, 5px);
+    width: 96px;
+    height: 38px;
+    margin: 1px 2px;
+    background-color: #E9E9ED;
+}
+.inputButton:active::after {
+    visibility: hidden;
+}
+
+.taskContainer {
+    margin: 25px;
+    font-size: 1.3em;
+}
+
+
+.taskContainer li {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.markAsChecked {
+    color: #3d3d3d;
+    text-decoration: line-through;
+}
