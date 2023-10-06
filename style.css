@@ -118,9 +118,15 @@ body {
     border-bottom: 2px dashed #DAB6FC;
     padding: 2px 10px;
     margin-right: 20px;
-    font-size: 30px;
+    font-size: 1em;
     width: 80%;
     min-width: 150px;
+}
+
+@media screen and (min-width:700px){
+    .inputTask {
+        font-size: 1.5em;
+    }
 }
 
 .inputTask:focus {
