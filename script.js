@@ -3,15 +3,6 @@ const inputTask = document.querySelector('.inputTask')
 const listItUp = document.querySelector('.inputButton')
 const emptyMessage = document.querySelector('.emptyMessage')
 
-// Save Data
-function saveData() {
-    localStorage.data = taskContainer.innerHTML
-}
-
-if (localStorage.data.length !== 0) {
-    taskContainer.innerHTML = localStorage.data
-}
-
 //Date And Year
 const d = new Date()
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -32,9 +23,7 @@ function addTasks() {
     saveData()
 }
 
-listItUp.addEventListener('click', () => {
-    addTasks()
-})
+listItUp.addEventListener('click', addTasks)
 
 inputTask.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
@@ -61,3 +50,11 @@ taskContainer.addEventListener('click', (e) => {
     }
     saveData()
 })
+
+// Save Data
+function saveData() {
+    localStorage.data = taskContainer.innerHTML
+}
+if (localStorage.data.length !== 0) {
+    taskContainer.innerHTML = localStorage.data
+}

@@ -186,7 +186,7 @@ body {
 }
 
 
-@media screen and (min-width:700px){
+@media (min-width:700px){
     .inputTask {
         font-size: 1.5em;
     }
