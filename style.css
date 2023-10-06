@@ -123,12 +123,6 @@ body {
     min-width: 150px;
 }
 
-@media screen and (min-width:700px){
-    .inputTask {
-        font-size: 1.5em;
-    }
-}
-
 .inputTask:focus {
     outline: 4px double #BBADFF;
     border-radius: 8px;
@@ -174,8 +168,9 @@ body {
 
 .taskContainer {
     margin: 25px;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
+
 
 
 .taskContainer li {
@@ -188,4 +183,15 @@ body {
 .markAsChecked {
     color: #3d3d3d80;
     text-decoration: line-through;
+}
+
+
+@media screen and (min-width:700px){
+    .inputTask {
+        font-size: 1.5em;
+    }
+
+    .taskContainer {
+        font-size: 1.6em;
+    }
 }
