@@ -46,8 +46,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 
-    background: #8895b390;
-    background-image: radial-gradient(#DAB6FC90 7.2%, transparent 0);
+    background: #8895b395;
+    background-image: radial-gradient(#dab6fc90 7.2%, transparent 0);
     background-size: 35px 35px;
 
     border: 4px double #E9E9ED;
@@ -130,9 +130,9 @@ body {
 
 .inputButton {
     position: relative;
-    background-color: #E9E9ED;
+    background-color: #fff6a2;
     font-size: 20px;
-    width: 100px;
+    width: 110px;
     height: 40px;
     border: none;
     border-radius: 4px;
@@ -144,7 +144,7 @@ body {
     left: 1px;
     top: 0;
     right: -1px;
-    background-color: #acacac;
+    background-color: #a59f68;
     border-radius: 5px;
     z-index: -1;
 }
@@ -155,7 +155,7 @@ body {
     width: 96px;
     height: 38px;
     margin: 1px 2px;
-    background-color: #E9E9ED;
+    background-color: #e6de98;
 }
 .inputButton:active::after {
     visibility: hidden;
@@ -175,6 +175,6 @@ body {
 }
 
 .markAsChecked {
-    color: #3d3d3d;
+    color: #3d3d3d80;
     text-decoration: line-through;
 }

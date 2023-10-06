@@ -14,6 +14,7 @@ listItUp.addEventListener('click', () => {
         alert('Please enter the task')
     } else {
         taskContainer.innerHTML += `<li>>> ${inputTask.value} <span>x</span></li>`
+        inputTask.value = ''
     }
     saveData()
 })
@@ -24,6 +25,7 @@ inputTask.addEventListener('keypress', (e) => {
             alert('Please enter the task')
         } else{
             taskContainer.innerHTML += `<li>>> ${inputTask.value} <span>x</span></li>`
+            inputTask.value = ''
         }
         saveData()
     }
