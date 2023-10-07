@@ -17,11 +17,13 @@ function addTasks() {
     } else{
         taskContainer.innerHTML += `
         <li>
-            <div class="taskSec"><img class="star" src="assests/nonstar.png">>> ${inputTask.value} </div>
+            <div class="taskSec">
+                <img class="star" src="assests/nonstar.png">>> ${inputTask.value}
+            </div>
             <span>x</span>
         </li>`
         inputTask.value = ''
-        inputTask.placeholder = '..'
+        inputTask.placeholder = '....'
         inputTask.classList.remove('emptyMessage')
     }
     saveData()

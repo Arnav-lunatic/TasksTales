@@ -200,11 +200,6 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-
-    /* prevent selection */
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 }
 .star {
     width: 20px;
