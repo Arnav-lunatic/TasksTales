@@ -21,6 +21,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .year {
     font-size: 60px;
@@ -60,10 +64,6 @@ body {
     box-shadow: 1px 1px 40px #3d3d3d;
     overflow-y: auto;
 
-    /* prevent selection */
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 }
 
 .container::-webkit-scrollbar {
@@ -84,6 +84,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .headingImg {
@@ -103,6 +108,11 @@ body {
 
 .inputHeading {
     text-align: center;
+    
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .inputContainer {
@@ -178,16 +188,26 @@ body {
     align-items: center;
     margin-bottom: 10px;
 }
-span {
+.taskContainer span {
     cursor: pointer;
+
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .taskSec {
     display: flex;
     align-items: center;
     cursor: pointer;
+
+    /* prevent selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .star {
-    width: 25px;
+    width: 20px;
     padding-bottom: 5px;
     margin-right: 10px;
 }
@@ -205,5 +225,8 @@ span {
 
     .taskContainer {
         font-size: 1.6em;
+    }
+    .star {
+        width: 25px;
     }
 }
