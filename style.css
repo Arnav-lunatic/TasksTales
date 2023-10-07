@@ -168,16 +168,28 @@ body {
 
 .taskContainer {
     margin: 25px;
+    margin-left: 0;
     font-size: 1.1em;
 }
-
-
 
 .taskContainer li {
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
+    align-items: center;
     margin-bottom: 10px;
+}
+span {
+    cursor: pointer;
+}
+.taskSec {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.star {
+    width: 25px;
+    padding-bottom: 5px;
+    margin-right: 10px;
 }
 
 .markAsChecked {

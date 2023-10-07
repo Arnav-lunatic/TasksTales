@@ -15,7 +15,11 @@ function addTasks() {
         inputTask.placeholder = 'Please enter the task'
         inputTask.classList.add('emptyMessage')
     } else{
-        taskContainer.innerHTML += `<li>>> ${inputTask.value} <span>x</span></li>`
+        taskContainer.innerHTML += `
+        <li>
+            <div class="taskSec"><img class="star" src="assests/nonstar.png">>> task </div>
+            <span>x</span>
+        </li>`
         inputTask.value = ''
         inputTask.placeholder = '..'
         inputTask.classList.remove('emptyMessage')
@@ -34,18 +38,29 @@ inputTask.addEventListener('keypress', (e) => {
 
 //Mark as check and delete
 let checked = false
+let star = false
 
 taskContainer.addEventListener('click', (e) => {
     if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove()
-    } else
-    if (e.target.tagName === 'LI') {
+    }
+    else if (e.target.tagName === 'DIV') {
         if (!checked) {
             e.target.classList.add('markAsChecked')
             checked = true
         } else {
             e.target.classList.remove('markAsChecked')
             checked = false
+        }
+    }
+    else if (e.target.tagName === 'IMG') {
+        if (!star) {
+            e.target.src = 'assests/star.png'
+            star = true
+        }
+        else if (star) {
+            e.target.src = 'assests/nonstar.png'
+            star = false
         }
     }
     saveData()
